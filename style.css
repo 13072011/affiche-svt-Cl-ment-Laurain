@@ -1,84 +1,15 @@
-/* Style global */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+/* Styles existants */
+
+.slides {
+  display: flex;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* Animation fluide */
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+.slide {
+  opacity: 0; /* Initialement masqué */
+  transition: opacity 0.8s ease-in-out; /* Transition d'opacité */
 }
 
-header h1 {
-    margin: 0;
-}
-
-main {
-    padding: 20px;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Chapitres */
-.chapter {
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-    gap: 20px;
-}
-
-.chapter:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.image img {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.image img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.text {
-    max-width: 500px;
-}
-
-.text h2 {
-    color: #444;
-    margin-bottom: 10px;
-}
-
-.text p, .text ul {
-    font-size: 16px;
-    color: #555;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .chapter {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .image img {
-        width: 90%;
-    }
+.slide.active {
+  opacity: 1; /* Affiche l'image active */
 }
