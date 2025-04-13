@@ -23,14 +23,6 @@ main {
     padding: 20px;
 }
 
-section {
-    margin-bottom: 20px;
-}
-
-h2 {
-    color: #444;
-}
-
 footer {
     background: #333;
     color: #fff;
@@ -41,71 +33,52 @@ footer {
     width: 100%;
 }
 
-/* Galerie d'images */
-.gallery {
+/* Chapitres */
+.chapter {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
     gap: 20px;
-    margin: 20px 0;
 }
 
-.image-container {
-    text-align: center;
-    max-width: 300px;
+.chapter:nth-child(even) {
+    flex-direction: row-reverse;
 }
 
-.gallery img {
-    width: 100%;
+.image img {
+    width: 300px;
     height: auto;
-    object-fit: cover;
-    border: 3px solid #333;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery img:hover {
+.image img:hover {
     transform: scale(1.1);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.image-container p {
-    margin-top: 10px;
-    font-size: 14px;
+.text {
+    max-width: 500px;
+}
+
+.text h2 {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.text p, .text ul {
+    font-size: 16px;
     color: #555;
 }
 
-/* Styles pour le responsive design */
+/* Responsive Design */
 @media screen and (max-width: 768px) {
-    .gallery {
+    .chapter {
         flex-direction: column;
-        align-items: center;
-    }
-
-    .image-container {
-        max-width: 90%; /* Les images occuperont 90% de la largeur de l'écran */
-    }
-
-    header, footer {
         text-align: center;
-        padding: 15px 5px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    body {
-        font-size: 16px;
     }
 
-    h2 {
-        font-size: 1.4rem;
-    }
-
-    .gallery {
-        gap: 10px;
-    }
-
-    .image-container p {
-        font-size: 12px;
+    .image img {
+        width: 90%;
     }
 }
