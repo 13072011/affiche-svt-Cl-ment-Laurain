@@ -1,0 +1,41 @@
+let currentIndex = 0;
+
+function showSlide(index) {
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+
+  // Réinitialiser toutes les slides
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    slide.style.transform = `translateX(${(i - index) * 100}%)`;
+  });
+
+  // Activer la slide actuelle
+  slides[index].classList.add('active');
+}
+
+function prevSlide() {
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Aller à la slide précédente
+  showSlide(currentIndex);
+}
+
+function nextSlide() {
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+
+  currentIndex = (currentIndex + 1) % totalSlides; // Aller à la slide suivante
+  showSlide(currentIndex);
+}
+
+// Afficher la première slide au chargement
+document.addEventListener('DOMContentLoaded', () => {
+  showSlide(currentIndex);
+
+  // Ajouter une lecture automatique toutes les 5 secondes
+  setInterval(() => {
+    nextSlide();
+  }, 5000); // 5000 ms = 5 secondes
+});
