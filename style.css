@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background: #333;
+    background: #044a94;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
@@ -26,7 +26,7 @@ section.collapsible {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease;
 }
 
 section.collapsible:hover {
@@ -46,7 +46,7 @@ section.collapsible h2 {
 section.collapsible .content {
     display: none;
     padding: 15px;
-    animation: slideDown 5s ease forwards;
+    animation: slideDown 0.5s ease forwards;
 }
 
 section.collapsible .content img {
