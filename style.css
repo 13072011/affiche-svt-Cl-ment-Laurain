@@ -1,4 +1,52 @@
-/* Animation de fade-in (apparition en fondu) */
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Style du header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Style du contenu principal */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1.2s ease-out;
+    animation-fill-mode: both; /* Maintient l'état final */
+}
+
+section img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+}
+
+/* Animation de fade-in */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -8,7 +56,7 @@
     }
 }
 
-/* Animation de slide-in (glissement depuis la gauche) */
+/* Animation de slide-in depuis la gauche */
 @keyframes slideIn {
     from {
         transform: translateX(-100%);
@@ -20,18 +68,7 @@
     }
 }
 
-/* Appliquer les animations */
-header {
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-section {
-    animation: slideIn 1.2s ease-out;
-    animation-delay: 0.5s;
-    animation-fill-mode: both; /* Maintient l'état final */
-}
-
-/* Ajout d'une animation au survol (hover) pour les mobiles */
+/* Interaction au survol */
 section:hover {
     transform: scale(1.02);
     transition: transform 0.3s ease-in-out;
