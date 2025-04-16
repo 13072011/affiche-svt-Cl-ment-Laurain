@@ -71,8 +71,9 @@ section.collapsible .content img {
 .arrow {
     font-size: 1.2em;
     transition: transform 0.3s ease;
+    transform: rotate(-90deg);
 }
 
 .arrow.open {
-    transform: rotate(90deg); /* Rotation de la flèche lorsqu'elle est ouverte */
+    transform: rotate(180deg); /* Rotation de la flèche lorsqu'elle est ouverte */
 }
