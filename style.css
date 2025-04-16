@@ -1,15 +1,39 @@
-/* Styles existants */
-
-.slides {
-  display: flex;
-  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* Animation fluide */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
-.slide {
-  opacity: 0; /* Initialement masqué */
-  transition: opacity 0.8s ease-in-out; /* Transition d'opacité */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
 }
 
-.slide.active {
-  opacity: 1; /* Affiche l'image active */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
 }
