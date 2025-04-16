@@ -1,39 +1,38 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
+/* Animation de fade-in (apparition en fondu) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
+/* Animation de slide-in (glissement depuis la gauche) */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Appliquer les animations */
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-main {
-    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 section {
-    margin-bottom: 20px;
-    background: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1.2s ease-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: both; /* Maintient l'état final */
 }
 
-section img {
-    max-width: 100%;
-    border-radius: 5px;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #333;
-    color: #fff;
+/* Ajout d'une animation au survol (hover) pour les mobiles */
+section:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
 }
