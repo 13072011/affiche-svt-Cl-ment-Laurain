@@ -46,7 +46,7 @@ section.collapsible h2 {
 section.collapsible .content {
     display: none;
     padding: 15px;
-    animation: slideDown 1s ease forwards;
+    animation: slideDown 5s ease forwards;
 }
 
 section.collapsible .content img {
