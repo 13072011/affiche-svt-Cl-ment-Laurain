@@ -8,68 +8,58 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Style du header */
 header {
     background: #333;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
-    animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Style du contenu principal */
 main {
     padding: 20px;
 }
 
-section {
-    margin-bottom: 20px;
+section.collapsible {
+    margin-bottom: 10px;
     background: #fff;
-    padding: 15px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    animation: slideIn 1.2s ease-out;
-    animation-fill-mode: both; /* Maintient l'état final */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-section img {
+section.collapsible:hover {
+    transform: scale(1.01);
+}
+
+section.collapsible h2 {
+    margin: 0;
+    padding: 15px;
+    background: #333;
+    color: #fff;
+}
+
+section.collapsible .content {
+    display: none;
+    padding: 15px;
+    animation: slideDown 0.5s ease forwards;
+}
+
+section.collapsible .content img {
     max-width: 100%;
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #333;
-    color: #fff;
-}
-
-/* Animation de fade-in */
-@keyframes fadeIn {
+/* Animation de glissement */
+@keyframes slideDown {
     from {
+        max-height: 0;
         opacity: 0;
     }
     to {
+        max-height: 500px;
         opacity: 1;
     }
-}
-
-/* Animation de slide-in depuis la gauche */
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-/* Interaction au survol */
-section:hover {
-    transform: scale(1.02);
-    transition: transform 0.3s ease-in-out;
 }
