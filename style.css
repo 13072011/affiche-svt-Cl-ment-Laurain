@@ -36,6 +36,9 @@ section.collapsible:hover {
 section.collapsible h2 {
     margin: 0;
     padding: 15px;
+    display: flex;
+    justify-content: space-between; /* Flèche à droite */
+    align-items: center;
     background: #333;
     color: #fff;
 }
@@ -62,4 +65,14 @@ section.collapsible .content img {
         max-height: 500px;
         opacity: 1;
     }
+}
+
+/* Style de la flèche */
+.arrow {
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+.arrow.open {
+    transform: rotate(90deg); /* Rotation de la flèche lorsqu'elle est ouverte */
 }
