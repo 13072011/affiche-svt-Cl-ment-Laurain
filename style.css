@@ -50,7 +50,7 @@ section.collapsible .content {
 }
 
 section.collapsible .content img {
-    max-width: 100%;
+    max-width: 75%;
     border-radius: 5px;
     margin-bottom: 10px;
 }
