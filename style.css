@@ -1,6 +1,6 @@
 
 body {
-  background-image: url('images/font.png');
+  background-image: url('image/font.png');
   background-repeat: no-repeat; /* Évite que l'image se répète */
   background-size: cover; /* Ajuste l'image pour couvrir tout l'écran */
   background-position: center; /* Centre l'image */
