@@ -1,10 +1,14 @@
-
+/* Style général */
 body {
-  background-image: url('image/font.png');
-  background-repeat: no-repeat; /* Évite que l'image se répète */
-  background-size: cover; /* Ajuste l'image pour couvrir tout l'écran */
-  background-position: center; /* Centre l'image */
-}
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url('image/font.png');
+    background-repeat: no-repeat; /* Évite que l'image se répète */
+    background-size: cover; /* Ajuste l'image pour couvrir tout l'écran */
+    background-position: center; /* Centre l'image */
+  }
 
 header {
     background: #0877ed;
