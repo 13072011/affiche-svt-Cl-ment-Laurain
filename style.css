@@ -4,7 +4,12 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-image: url("/image/font.png");
+}
+body {
+  background-image: url('images/background.jpg');
+  background-repeat: no-repeat; /* Évite que l'image se répète */
+  background-size: cover; /* Ajuste l'image pour couvrir tout l'écran */
+  background-position: center; /* Centre l'image */
 }
 
 header {
