@@ -56,7 +56,9 @@ section.collapsible .content img {
     border-radius: 5px;
     margin-bottom: 10px;
 }
-
+footer {
+   text-align: center; 
+}
 
 /* Animation de glissement */
 @keyframes slideDown {
